@@ -1,0 +1,22 @@
+.input {
+  width: 405px;
+  height: 50px;
+  padding: 20px;
+
+  background: linear-gradient(
+    90deg,
+    #f8cf2c 46.92%,
+    rgba(194, 155, 1, 0.74) 102.36%
+  );
+  
+  border: none;
+  border-radius: 10px;
+
+  font-size: 18px;
+
+  &::placeholder {
+    font-weight: 400;
+    color: #000;
+    font-size: 18px;
+  }
+}

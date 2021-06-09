@@ -1,7 +1,16 @@
+import "./style/global.scss";
+import style from "./style/app.module.scss";
+import Input from "./components/Input";
+
 function App() {
   return (
-    <div>
-      <h1>Hello World!</h1>
+    <div className={style.container}>
+      <div className={style.search}>
+        <h1>Estatisticas - COVID 19</h1>
+        <Input />
+      </div>
+
+
     </div>
   );
 }
