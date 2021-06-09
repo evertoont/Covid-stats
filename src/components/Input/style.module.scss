@@ -1,22 +1,30 @@
 .input {
-  width: 405px;
-  height: 50px;
-  padding: 20px;
+  width: 25.30rem;
+  height: 3.12rem;
+  padding: 1.25rem;
+
+  @media (max-width: 414px) {
+    width: 20rem;
+  }
+
+  @media (max-width: 320px) {
+    width: 17.5rem;
+  }
 
   background: linear-gradient(
     90deg,
     #f8cf2c 46.92%,
     rgba(194, 155, 1, 0.74) 102.36%
   );
-  
+
   border: none;
   border-radius: 10px;
 
-  font-size: 18px;
+  font-size: 1.12rem;
 
   &::placeholder {
     font-weight: 400;
     color: #000;
-    font-size: 18px;
+    font-size: 1.12rem;
   }
 }

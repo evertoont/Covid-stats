@@ -2,11 +2,23 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr) 1;
   grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 80px;
-  grid-row-gap: 16px;
-  
-  width: 365px;
-  height: 160px;
+  grid-column-gap: 5rem;
+  grid-row-gap: 0.87rem;
+
+  width: 22.8rem;
+  height: 10.3rem;
+
+  @media (max-width: 414px) {
+    width: 20.3rem;
+  }
+
+  @media (max-width: 320px) {
+    width: 18.75rem;
+  }
+
+  @media (min-width: 768px) {
+    width: 21.25rem;
+  }
 
   color: #fff;
 
@@ -17,24 +29,37 @@
 
   h2 {
     padding-top: 5px;
-    font-size: 22px;
+    font-size: 1.4rem;
 
-    &:hover{
+    @media (max-width: 414px) {
+      font-size: 1.25rem;
+    }
+
+    &:hover {
       color: #f8cf2c;
       cursor: pointer;
     }
   }
 
   p {
-    font-size: 20px;
+    font-size: 1.25rem;
+    margin-bottom: 4px;
 
-    &:hover{
+    @media (max-width: 414px) {
+      font-size: 1.12rem;
+    }
+
+    &:hover {
       color: #f8cf2c;
     }
   }
 
   span {
-    font-size: 16px;
+    font-size: 1rem;
+
+    @media (max-width: 414px) {
+      font-size: 1rem;
+    }
   }
 
   .state {
