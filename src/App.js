@@ -1,6 +1,7 @@
 import "./style/global.scss";
 import style from "./style/app.module.scss";
 import Input from "./components/Input";
+import Card from "./components/Card";
 
 function App() {
   return (
@@ -10,7 +11,35 @@ function App() {
         <Input />
       </div>
 
-
+      <div className={style.row_state}>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </div>
   );
 }
