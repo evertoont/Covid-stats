@@ -1,0 +1,36 @@
+.loading {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+
+  grid-area: 1 / 2 / 2 / 3;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    grid-area: 1 / 1 / 2 / 3
+  }
+
+  @media (max-width: 414px) {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  &::after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #f8cf2c;
+    border-color: #f8cf2c transparent #f8cf2c transparent;
+    animation: loading 1.2s linear infinite;
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
