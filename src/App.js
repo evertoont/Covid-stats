@@ -1,20 +1,28 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import style from "./style/app.module.scss";
 import Input from "./components/Input";
 import Card from "./components/Card";
 import Loading from "./components/Loading";
 import Api from "./services/api";
+import { MyContext } from "./context/InputContext";
 
 import "./style/global.scss";
 
 function App() {
   const [stateList, setStateList] = useState([]);
+  const state = useContext(MyContext);
 
   useEffect(() => {
     Api.get().then((response) => {
       setStateList(response.data.data);
     });
   }, []);
+
+  const stateLowerCase = state.stateInput.toLowerCase();
+
+  const stateFiltered = stateList.filter((data) =>
+    data.state.toLowerCase().includes(stateLowerCase)
+  );
 
   return (
     <div className={style.container}>
@@ -25,7 +33,7 @@ function App() {
 
       <div className={style.row_state}>
         {stateList.length > 0 ? (
-          stateList.map((data) => {
+          stateFiltered.map((data) => {
             return (
               <Card
                 key={data.uid}
