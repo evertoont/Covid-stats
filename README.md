@@ -1,7 +1,7 @@
 <h1 align="center">
 Estatisticas Covid-19 ☣ </h1>
 
-<p align="center">Um site para visualizar as estatísticas do COVID-19 nos estados brasileiros.</p>
+<p align="center">Um site para visualizar as estatísticas do COVID-19 nos estados brasileiros. <a href="https://covid-stats-nine.vercel.app/">Covid-Stats</a></p>
 
 <p align="center">
   <a href="https://github.com/evertoont">
