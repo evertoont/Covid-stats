@@ -1,5 +1,5 @@
 <h1 align="center">
-Estatisticas Covid-19 ☣ </h1>
+Estatisticas Covid-19 🦠 </h1>
 
 <p align="center">Um site para visualizar as estatísticas do COVID-19 nos estados brasileiros. <a href="https://covid-stats-nine.vercel.app/">Covid-Stats</a></p>
 
@@ -42,10 +42,6 @@ $ yarn start
 // or
 $ npm start
 ```
-
-## 📝 Licença
-
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 
 ---
 
