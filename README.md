@@ -15,32 +15,27 @@ Estatisticas Covid-19 🦠 </h1>
 <p align="center">
 <img align="center" src="https://user-images.githubusercontent.com/55769021/121609659-b475fa80-ca2a-11eb-962f-e97c7c6d4260.png" alt="tela da aplicação" width="60%"> </p>
 
-## 💻 Pré-requisitos
+## 📋 Pré-requisitos
 
 - [Node.js](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/)
+
+## :computer: Tecnologias
+
+- [ReactJS](https://reactjs.org/)
+- [Axios](https://github.com/axios/axios)
+- [Sass](https://sass-lang.com/)
+
 
 ## 🚀 Rodando o projeto
 
-- Clone este repositório na sua maquina
-
 ```bash
-$ git clone https://github.com/evertoont/Covid-stats
-```
-
-- Instale as dependências do projeto
-
-```bash
-   $ yarn install
-   // or
-   $ npm install
-```
-
-- Inicie o projeto
-
-```bash
+# Clone este repositório e acesse sua pasta
+$ git clone https://github.com/evertoont/Covid-stats && cd Covid-stats
+# Instale as dependências
+$ yarn install
+# Iniciie a aplicação
 $ yarn start
-// or
-$ npm start
 ```
 
 ---
