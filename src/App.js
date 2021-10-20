@@ -25,11 +25,11 @@ function App() {
   );
 
   return (
-    <div className={style.container}>
-      <div className={style.search}>
+    <main className={style.container}>
+      <section className={style.search}>
         <h1>Estatisticas - COVID 19</h1>
         <Input />
-      </div>
+      </section>
 
       <div className={style.row_state}>
         {stateList.length > 0 ? (
