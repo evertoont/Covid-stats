@@ -13,15 +13,15 @@ function App() {
   const state = useContext(MyContext);
 
   useEffect(() => {
-    Api.get().then((response) => {
-      setStateList(response.data.data);
+    Api.get().then(({response}) => {
+      setStateList(response.data);
     });
   }, []);
 
-  const stateLowerCase = state.stateInput.toLowerCase();
+  const stateInLowerCase = state.stateInput.toLowerCase();
 
-  const stateFiltered = stateList.filter((data) =>
-    data.state.toLowerCase().includes(stateLowerCase)
+  const stateFilteredName = stateList.filter((data) =>
+    data.state.toLowerCase().includes(stateInLowerCase)
   );
 
   return (
@@ -33,7 +33,7 @@ function App() {
 
       <div className={style.row_state}>
         {stateList.length > 0 ? (
-          stateFiltered.map((data) => {
+          stateFilteredName.map((data) => {
             return (
               <Card
                 key={data.uid}
