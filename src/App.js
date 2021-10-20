@@ -50,7 +50,7 @@ function App() {
           <Loading />
         )}
       </div>
-    </div>
+    </main>
   );
 }
 
