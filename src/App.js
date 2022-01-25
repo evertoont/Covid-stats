@@ -13,8 +13,8 @@ function App() {
   const state = useContext(MyContext);
 
   useEffect(() => {
-    Api.get().then(({response}) => {
-      setStateList(response.data);
+    Api.get().then(({ data }) => {
+      setStateList(data.data);
     });
   }, []);
 
