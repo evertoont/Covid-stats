@@ -7,6 +7,7 @@ import Api from "./services/api";
 import { MyContext } from "./context/InputContext";
 
 import "./style/global.scss";
+import { EmptyState } from "./components/EmptyState";
 
 function App() {
   const [stateList, setStateList] = useState([]);
@@ -24,32 +25,40 @@ function App() {
     data.state.toLowerCase().includes(stateInLowerCase)
   );
 
+  let content;
+
+  if (stateList.length === 0) {
+    content = <Loading />;
+  } else if (stateFilteredName.length === 0 && state.stateInput !== "") {
+    content = <EmptyState />;
+  } else {
+    content = (
+      <div className={style.row_state}>
+        {stateFilteredName.map((data) => {
+          return (
+            <Card
+              key={data.uid}
+              state={data.state}
+              uf={data.uf}
+              cases={data.cases}
+              deaths={data.deaths}
+              suspects={data.suspects}
+              refuses={data.refuses}
+            />
+          );
+        })}
+      </div>
+    );
+  }
+
   return (
     <main className={style.container}>
       <section className={style.search}>
-        <h1>Estatisticas - COVID 19</h1>
+        <h1>Estatísticas - COVID 19</h1>
         <Input />
       </section>
 
-      <div className={style.row_state}>
-        {stateList.length > 0 ? (
-          stateFilteredName.map((data) => {
-            return (
-              <Card
-                key={data.uid}
-                state={data.state}
-                uf={data.uf}
-                cases={data.cases}
-                deaths={data.deaths}
-                suspects={data.suspects}
-                refuses={data.refuses}
-              />
-            );
-          })
-        ) : (
-          <Loading />
-        )}
-      </div>
+      <div className={StyleSheet.wrapperContent}>{content}</div>
     </main>
   );
 }
